@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout 연습</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin:0;
+            display:grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 100px auto 50px;
+            grid-template-areas: 
+                'header header'
+                'main side'
+                'footer footer';
+        }
+        header{
+            background: black;
+            color:white;
+            grid-area: header;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            background: white;
+            color:black;
+            grid-area:main;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        aside{
+            background: tomato;
+            grid-area:side;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer{
+            background: black;
+            color:white;
+            grid-area: footer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <main>main</main>
+    <aside>side</aside>
+    <footer>footer</footer>
+</body>
+</html>
